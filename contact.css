@@ -1,0 +1,151 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0b1120;
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 25px 8%;
+    background: linear-gradient(135deg, #0b1120, #111c35);
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px;
+    padding: 20px 0;
+    border-bottom: 1px solid #263247;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #e2e8f0;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #38bdf8;
+}
+
+/* Contact section */
+.contact-section {
+    max-width: 650px;
+    margin: 55px auto;
+    padding: 35px;
+    background: #151f33;
+    border: 1px solid #263247;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.contact-section h1 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact-section h1 span {
+    color: #38bdf8;
+}
+
+.contact-section p {
+    text-align: center;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Form fields */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    background: #0b1120;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #94a3b8;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* Submit button */
+form button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #0b1120;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .contact-section {
+        margin: 35px auto;
+        padding: 22px;
+    }
+
+    .contact-section h1 {
+        font-size: 30px;
+    }
+}
